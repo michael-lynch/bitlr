@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<meta charset="utf-8">
+
+	<title>Bitlr jQuery Plugin</title>
+	
+	<meta name="description" content="A simple, lightweight jQuery plugin used to shorten a link.">
+	
+	<meta name="author" content="http://michaelynch.com">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+</head>
+
+	<body lang="en">
+
+		<div class="urls">
+		
+			<p class="long-url">Long URL: http://michaelynch.com</p>
+		
+			<p class="short-url">Short URL: <span></span></p>
+			
+		</div>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		
+		<script src="/src/bitlr.js"></script>
+		
+		<script>
+		
+			$.bitlr({
+				apiKey: '23c47f073826eb0cdc1c2abedbb006976e0e0549',
+				link: 'http://michaelynch.com',
+				anchor: true,
+				success: function(newLink) {
+					$('.short-url span').html(newLink);
+				},
+				error: function() {
+					$('.urls').hide();
+				}
+			});
+		
+		</script>
+
+	</body>
+	
+</html>
