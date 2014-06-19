@@ -8,20 +8,23 @@ A simple, lightweight jQuery plugin used to shorten a link using Bit.ly.
 
 Include jQuery and the plugin in the head or footer of your page.
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+```js
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     
-    <script src="/js/plugins/bitlr.js"></script>
+<script src="/js/plugins/bitlr.js"></script>
+```
     
 Initialize the plugin and pass the function your api key, the link you want to shorten and the success callback function. 
 
-	$.bitlr({
-		apiKey: 'XXXXXXXXXXXXXXXXXXXXX',
-		link: 'http://google.com',
-		success: function(newLink) {
-		    console.log(newLink);
-		}
-	});
-	
+```js
+$.bitlr({
+	apiKey: 'XXXXXXXXXXXXXXXXXXXXX',
+	link: 'http://google.com',
+	success: function(newLink) {
+	    console.log(newLink);
+	}
+});
+```	
 
 ####Required Properties
 
@@ -57,18 +60,19 @@ apiKey: string
 
 #####Example:
 
-		$(function() {
-			
-			$.bitlr({
-				apiKey: 'XXXXXXXXXXXXXXXXXXXXX',
-				link: 'http://google.com',
-				success: function(newLink) {
-		    		console.log(newLink);
-				},
-				error: function() {
-					console.log('There was an error.');
-				}
-			});
-				
-		});
-			
+```js
+$(function() {
+	
+	$.bitlr({
+		apiKey: 'XXXXXXXXXXXXXXXXXXXXX',
+		link: 'http://google.com',
+		success: function(newLink) {
+    		console.log(newLink);
+		},
+		error: function() {
+			console.log('There was an error.');
+		}
+	});
+		
+});
+```			
