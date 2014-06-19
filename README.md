@@ -8,7 +8,7 @@ A simple, lightweight jQuery plugin used to shorten a link using Bit.ly.
 
 Include jQuery and the plugin in the head or footer of your page.
 
-```js
+```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     
 <script src="/js/plugins/bitlr.js"></script>
